@@ -9,18 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TicTacToe">
-        <activity android:name=".RulesActivity"
-            android:label="Rules">
+        <activity android:name=".GameActivityBot"
+            android:parentActivityName=".PlayerEntryBot">
 
         </activity>
+        <activity android:name=".PlayerEntryBot"
+            android:parentActivityName=".HomeActivity"/>
         <activity
-            android:name=".PlayerEntry"
+            android:name=".RulesActivity"
+            android:label="Rules"
+            android:parentActivityName=".HomeActivity"/>
+        <activity
+            android:name=".PlayerEntryNoBot"
             android:label="Players Entry"
-            android:parentActivityName=".HomeActivity">
-
-        </activity>
-        <activity android:name=".HomeActivity"
-            >
+            android:parentActivityName=".HomeActivity" />
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,11 +31,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".GameActivityNoBot"
             android:label="Game"
-            android:parentActivityName=".PlayerEntry">
-
-        </activity>
+            android:parentActivityName=".PlayerEntryNoBot" />
 
         <meta-data
             android:name="preloaded_fonts"

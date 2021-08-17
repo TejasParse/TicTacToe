@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".MainActivity">
+    tools:context=".GameActivityNoBot">
 
     <TextView
-        android:id="@+id/turnText"
+        android:id="@+id/turnTextBot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/commands"
         android:fontFamily="@font/architects_daughter"
+        android:gravity="center"
         android:paddingLeft="10dp"
         android:paddingTop="4dp"
         android:paddingRight="10dp"
@@ -28,7 +29,7 @@
         tools:text="Hello" />
 
     <LinearLayout
-        android:id="@+id/grid"
+        android:id="@+id/gridBot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/black"
@@ -39,13 +40,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/layer1"
+            android:id="@+id/layer1Bot"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button00"
+                android:id="@+id/button00Bot"
                 android:layout_width="wrap_content"
                 android:layout_height="72dp"
                 android:layout_marginEnd="3dp"
@@ -58,9 +59,9 @@
                 android:textSize="40sp" />
 
             <Button
-                android:id="@+id/button01"
+                android:id="@+id/button01Bot"
                 android:layout_width="wrap_content"
-                android:layout_height="72dp"
+                android:layout_height="match_parent"
                 android:layout_marginStart="3dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginEnd="3dp"
@@ -73,7 +74,7 @@
                 android:textSize="40sp" />
 
             <Button
-                android:id="@+id/button02"
+                android:id="@+id/button02Bot"
                 android:layout_width="wrap_content"
                 android:layout_height="72dp"
                 android:layout_marginStart="3dp"
@@ -88,13 +89,13 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layer2"
+            android:id="@+id/layer2Bot"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/button10Bot"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginTop="3dp"
@@ -108,7 +109,7 @@
                 android:textSize="40sp" />
 
             <Button
-                android:id="@+id/button11"
+                android:id="@+id/button11Bot"
                 android:layout_width="wrap_content"
                 android:layout_height="72dp"
                 android:layout_margin="3dp"
@@ -119,7 +120,7 @@
                 android:textSize="40sp" />
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/button12Bot"
                 android:layout_width="wrap_content"
                 android:layout_height="72dp"
                 android:layout_marginStart="3dp"
@@ -134,13 +135,13 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layer3"
+            android:id="@+id/layer3Bot"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button20"
+                android:id="@+id/button20Bot"
                 android:layout_width="wrap_content"
                 android:layout_height="72dp"
                 android:layout_marginTop="3dp"
@@ -153,7 +154,7 @@
                 android:textSize="40sp" />
 
             <Button
-                android:id="@+id/button21"
+                android:id="@+id/button21Bot"
                 android:layout_width="wrap_content"
                 android:layout_height="72dp"
                 android:layout_marginStart="3dp"
@@ -168,7 +169,7 @@
                 android:textSize="40sp" />
 
             <Button
-                android:id="@+id/button22"
+                android:id="@+id/button22Bot"
                 android:layout_width="wrap_content"
                 android:layout_height="72dp"
                 android:layout_marginStart="3dp"
@@ -183,7 +184,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/restartButton"
+        android:id="@+id/restartButtonBot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/orange_button"
@@ -197,19 +198,19 @@
         app:layout_constraintVertical_bias="0.767" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBoxBot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/SameNames"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/restartButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintBottom_toBottomOf="@+id/restartButtonBot"
+        app:layout_constraintEnd_toStartOf="@+id/restartButtonBot"
+        app:layout_constraintHorizontal_bias="0.693"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/restartButton" />
+        app:layout_constraintTop_toTopOf="@+id/restartButtonBot" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/floatingActionButtonBot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -225,39 +226,39 @@
         app:srcCompat="@drawable/outline_restart_alt_white_24" />
 
     <TextView
-        android:id="@+id/p1text"
+        android:id="@+id/p1textBot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/commands"
         android:fontFamily="@font/aclonica"
+        android:gravity="center"
         android:padding="10dp"
         android:text="@string/garbage"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintVertical_bias="0.146" />
 
     <TextView
-        android:id="@+id/p2text"
+        android:id="@+id/p2textBot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/commands"
         android:fontFamily="@font/aclonica"
+        android:gravity="center"
         android:padding="10dp"
         android:text="@string/garbage"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/p1text"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/p1text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
+        app:layout_constraintVertical_bias="0.244" />
 
     <TextView
-        android:id="@+id/Result"
+        android:id="@+id/ResultBot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/blue_button"

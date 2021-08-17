@@ -2,7 +2,6 @@ package com.example.tictactoe;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -13,13 +12,11 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static com.example.tictactoe.R.id.invisible;
-import static com.example.tictactoe.R.id.turnText;
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class GameActivityNoBot extends AppCompatActivity implements View.OnClickListener{
 
     public final static String p1Name = "p1Name";
     public final static String p2Name = "p2Name";
+    public final static int getTurn=1;
     private int done = -1;
     private Button b00,b01,b02,b10,b11,b12,b20,b21,b22,restart;
     private int turn = 1;
@@ -40,10 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        this.setTitle("Home");
-
+        setContentView(R.layout.activity_game_activity_nobot);
+        this.setTitle("Game");
         restart =findViewById(R.id.restartButton);
         Intent intent =getIntent();
         name1 = intent.getStringExtra(p1Name);
@@ -89,15 +84,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if(clickedFAB==0)
                 {
-                    Toast.makeText(MainActivity.this, "Restart the Game?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GameActivityNoBot.this, "Restart the Game?", Toast.LENGTH_SHORT).show();
                     clickedFAB+=1;
                     return;
                 }
 
-                Intent intent1 = new Intent(v.getContext(),MainActivity.class);
+                Intent intent1 = new Intent(v.getContext(), GameActivityNoBot.class);
                 intent1.putExtra(p1Name,name1);
                 intent1.putExtra(p2Name,name2);
                 startActivity(intent1);
+                finish();
             }
         });
 
@@ -108,15 +104,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 checkBox = findViewById(R.id.checkBox);
                 if(checkBox.isChecked())
                 {
-                    Intent intent1 = new Intent(v.getContext(),PlayerEntry.class);
+                    Intent intent1 = new Intent(v.getContext(), PlayerEntryNoBot.class);
                     startActivity(intent1);
+                    finish();
                 }
                 else
                 {
-                    Intent intent1 = new Intent(v.getContext(),MainActivity.class);
+                    Intent intent1 = new Intent(v.getContext(), GameActivityNoBot.class);
                     intent1.putExtra(p1Name,name1);
                     intent1.putExtra(p2Name,name2);
                     startActivity(intent1);
+                    finish();
                 }
             }
         });
