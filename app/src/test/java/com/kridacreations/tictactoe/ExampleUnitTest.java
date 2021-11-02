@@ -1,4 +1,4 @@
-package com.example.tictactoe;
+package com.kridacreations.tictactoe;
 
 import org.junit.Test;
 

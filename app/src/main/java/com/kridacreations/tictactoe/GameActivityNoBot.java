@@ -1,4 +1,4 @@
-package com.example.tictactoe;
+package com.kridacreations.tictactoe;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -118,9 +118,6 @@ public class GameActivityNoBot extends AppCompatActivity implements View.OnClick
                 }
             }
         });
-
-
-
     }
 
     @SuppressLint("RestrictedApi")

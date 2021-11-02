@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.tictactoe">
+    package="com.kridacreations.tictactoe">
 
     <application
         android:allowBackup="true"
@@ -9,21 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TicTacToe">
-        <activity android:name=".GameActivityBot"
-            android:parentActivityName=".PlayerEntryBot">
-
-        </activity>
-        <activity android:name=".PlayerEntryBot"
-            android:parentActivityName=".HomeActivity"/>
-        <activity
-            android:name=".RulesActivity"
-            android:label="Rules"
-            android:parentActivityName=".HomeActivity"/>
-        <activity
-            android:name=".PlayerEntryNoBot"
-            android:label="Players Entry"
-            android:parentActivityName=".HomeActivity" />
-        <activity android:name=".HomeActivity">
+        <activity android:name="com.kridacreations.tictactoe.krida_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,9 +17,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GameActivityNoBot"
+            android:name="com.kridacreations.tictactoe.GameActivityBot"
+            android:parentActivityName="com.kridacreations.tictactoe.PlayerEntryBot"></activity>
+        <activity
+            android:name="com.kridacreations.tictactoe.PlayerEntryBot"
+            android:parentActivityName="com.kridacreations.tictactoe.HomeActivity" />
+        <activity
+            android:name="com.kridacreations.tictactoe.RulesActivity"
+            android:label="Rules"
+            android:parentActivityName="com.kridacreations.tictactoe.HomeActivity" />
+        <activity
+            android:name="com.kridacreations.tictactoe.PlayerEntryNoBot"
+            android:label="Players Entry"
+            android:parentActivityName="com.kridacreations.tictactoe.HomeActivity" />
+        <activity android:name="com.kridacreations.tictactoe.HomeActivity">
+
+        </activity>
+        <activity
+            android:name="com.kridacreations.tictactoe.GameActivityNoBot"
             android:label="Game"
-            android:parentActivityName=".PlayerEntryNoBot" />
+            android:parentActivityName="com.kridacreations.tictactoe.PlayerEntryNoBot" />
 
         <meta-data
             android:name="preloaded_fonts"

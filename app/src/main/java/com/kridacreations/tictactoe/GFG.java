@@ -1,4 +1,4 @@
-package com.example.tictactoe;
+package com.kridacreations.tictactoe;
 
 // Java program to find the
 // next optimal move for a player

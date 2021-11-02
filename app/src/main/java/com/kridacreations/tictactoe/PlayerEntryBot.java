@@ -1,4 +1,4 @@
-package com.example.tictactoe;
+package com.kridacreations.tictactoe;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class PlayerEntryBot extends AppCompatActivity {
 

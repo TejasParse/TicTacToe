@@ -8,6 +8,18 @@
     android:theme="@style/Theme.Design.Light.NoActionBar"
     tools:context=".HomeActivity">
 
+    <TextView
+        android:id="@+id/madeBy2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:text="@string/made_by_tejas_parse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.929" />
+
     <Button
         android:id="@+id/startButton2"
         android:layout_width="wrap_content"
