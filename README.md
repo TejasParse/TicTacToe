@@ -1,6 +1,6 @@
 # TicTacToe
 The link to the App apk:- 
-https://drive.google.com/file/d/10Lo1gny2MOlPd-0GL71Oo-ROJLTjzcmJ/view?usp=sharing
+https://play.google.com/store/apps/details?id=com.kridacreations.tictactoe
 Thank You!
 
 ![Home Screen](https://github.com/TejasParse/TicTacToe/blob/master/Images/pic1.jfif?raw=true) ![Home Screen](https://github.com/TejasParse/TicTacToe/blob/master/Images/pic2.jfif?raw=true)
